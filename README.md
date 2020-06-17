@@ -66,3 +66,23 @@ Y rellenamos con los siguientes parámetros:
 * BaudRate: El mismo al que incie el programa el puerto serial
 
 Con esto se nos debe crear una nueva consola donde veamos las impresiones del programa
+
+## I2C
+
+Como hemos comentado anteriormente, derivado del nuevo entorno, la comunicación que se realiza entre el "Módulo Software" y el "Módulo Hardware" pasa de ser USB a I2C. En Ardunio, para poder realizar un progrma con I2C deberas incluir la librería Wire.h
+
+```C
+#include "Wire.h"
+```
+
+Por defecto dentro de Eclipse esta librería se encuentra desactivada, para que Eclipse reconozca el fichero de cabecera anterior, deberás activarla manualmente:
+
+Click Derecho en el Proyecto -> Properties -> Libraries 
+
+Desplegamos la lista de librerías y seleccionamos Wire. De esta manera ya podrás en tus programas incluir el fichero de cabecera y las llamadas correspondientes sin recibir ningún error.
+
+Como se puede ver además de la librería Wire tenemos otras librerías comunes. En caso de necesitar una libería adicional estas se pueden instalar de la siguiente forma:
+
+Help -> Arduino Downloads Manager
+
+Ahi podrás descargar tanto nuevas librerías como plataformas de desarrollo para cualquier tipo de placa Arduino.
